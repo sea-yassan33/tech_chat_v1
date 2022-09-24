@@ -1,0 +1,11 @@
+<h1>THCH CHATの一覧画面</h1>
+
+<div>
+  <% @posts.each do |post|%>
+    <div>
+      <p>タイトル：<%= post.title %></p>
+      <p>内容：<%= post.context %></p>
+      <p>投稿者名：<%= post.name %></p>
+    </div>
+  <% end %>
+</div>

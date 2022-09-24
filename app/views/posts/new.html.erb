@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <h3>投稿する</h3>
+    <%= form_with(model: @post, local: true) do |form| %>
+      <%= form.text_field :title, placeholder: "title" %>
+      <br>
+      <%= form.text_area :context, placeholder: "text", rows: "10"%>
+      <br>
+      <%= form.text_field :name, placeholder: "name" %>
+      <br>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

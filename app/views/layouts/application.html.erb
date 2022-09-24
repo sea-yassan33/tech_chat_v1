@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TechChatV1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1><a href="/">THCH CHAT</a></h1>
+        <div>
+          <a href="/posts/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
