@@ -1,11 +1,20 @@
-<h1>THCH CHATの一覧画面</h1>
-
-<div>
+<%# <h1>THCH CHATの一覧画面</h1> %>
+<div class="main-display">
   <% @posts.each do |post|%>
-    <div>
-      <p>タイトル：<%= post.title %></p>
-      <p>内容：<%= post.context %></p>
-      <p>投稿者名：<%= post.name %></p>
+    <div class="questions-box">
+      <div class="coment">
+        <p class="count">0</p>
+        <p class="text1">coments</p>
+      </div>
+      <div class="question">
+        <div class="title-name">
+          <div class="title">タイトル：<%= post.title %></div>
+          <div><%= post.name %></div>
+        </div>
+        <div class="context">
+          <p>内容：<%= post.context %></p>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>

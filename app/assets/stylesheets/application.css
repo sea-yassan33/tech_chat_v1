@@ -12,4 +12,59 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+/******************************************** 
+ リセット用
+*********************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+/******************************************** 
+*********************************************/
+
+.header{
+  background-color: #1C3367;
+  width: auto;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.logo{
+  margin-left: 20px;
+}
+.logo a{
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 100;
+  letter-spacing: 1.8px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.posts-btn{
+  margin-right: 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+.posts-btn a{
+  color: #3A3736;
+  font-size: 16px;
+  text-decoration: none;
+}
