@@ -87,6 +87,29 @@
   min-height: 346px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 0 60px;
+  padding: 0 90px;
   padding-top: 40px;
+}
+.form-title{
+  width: 520px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+.form-text{
+  width: 520px;
+  height: 120px;
+  margin-bottom: 15px;
+}
+.form-name{
+  width: 520px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.form-post{
+  width: 520px;
+  height: 36px;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: #1C3667;
+  border: none;
 }
