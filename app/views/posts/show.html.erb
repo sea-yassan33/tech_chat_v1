@@ -1,0 +1,23 @@
+<div class="">
+  <div class="question">
+    <div class="title-name">
+      <div class="title"><%= @post.title %></div>
+      <div class="user-name"><%= @post.name %></div>
+    </div>
+    <div class="context">
+      <p><%= @post.context %></p>
+    </div>
+  </div>
+</div>
+<hr>
+<div>
+  <h3>質問/返答</h3>
+  <%= form_with(model: @coment, local: true) do |form| %>
+    <%= form.text_area :com_ans, placeholder: "text", rows: "10"%>
+    <br>
+    <%= form.text_field :com_name, placeholder: "name" %>
+    <br>
+    <%= form.submit "SEND" %>
+  <% end %>
+<div>
+<hr>
