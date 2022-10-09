@@ -1,14 +1,16 @@
-<div>
-  <div>
-    <h3>投稿する</h3>
-    <%= form_with(model: @post, local: true) do |form| %>
-      <%= form.text_field :title, placeholder: "title" %>
-      <br>
-      <%= form.text_area :context, placeholder: "text", rows: "10"%>
-      <br>
-      <%= form.text_field :name, placeholder: "name" %>
-      <br>
-      <%= form.submit "SEND" %>
-    <% end %>
+<div class="form-main">
+  <div class="form-box">
+    <div class="form-top"></div>
+    <div class="form">
+      <%= form_with(model: @post, local: true) do |form| %>
+        <%= form.text_field :title, placeholder: "タイトル" ,class: "form-title"%>
+        <br>
+        <%= form.text_area :context, placeholder: "質問内容", rows: "10" ,class: "form-text"%>
+        <br>
+        <%= form.text_field :name, placeholder: "投稿者名",class: "form-name" %>
+        <br>
+        <%= form.submit "POST", class: "form-post" %>
+      <% end %>
+    </div>
   </div>
 </div>
