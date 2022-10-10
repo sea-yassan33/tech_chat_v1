@@ -1,26 +1,28 @@
-<div class="">
-  <div class="question">
-    <div class="title-name">
-      <div class="title"><%= @post.title %></div>
-      <div class="user-name"><%= @post.name %></div>
+<div class="show-questions-box">
+  <div class="show-question">
+    <div class="show-title-name">
+      <div class="show-title"><%= @post.title %></div>
+      <div class="show-user-name"><%= @post.name %></div>
     </div>
     <div class="context">
       <p><%= @post.context %></p>
     </div>
   </div>
 </div>
-<hr>
-<div>
-  <h3>質問/返答</h3>
-  <%= form_with(model: [@post, @comment], local: true) do |form| %>
-    <%= form.text_area :com_ans, placeholder: "text", rows: "10"%>
-    <br>
-    <%= form.text_field :com_name, placeholder: "name" %>
-    <br>
-    <%= form.submit "SEND" %>
-  <% end %>
+<div class="show-form-main">
+  <div class="show-form-box">
+    <div class="show-form-top">質問/返答</div>
+    <div class="form">
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :com_ans, placeholder: "text", rows: "10" ,class: "form-text"%>
+        <br>
+        <%= form.text_field :com_name, placeholder: "name" ,class: "form-name" %>
+        <br>
+        <%= form.submit "SEND" ,class: "form-post" %>
+      <% end %>
+    </div>
+  </div>
 </div>
-<hr>
 <div class="comments">
   <h3>＜返答一覧＞</h3>
   <% @comments.each do |comment| %>
