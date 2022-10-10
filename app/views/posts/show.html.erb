@@ -12,12 +12,20 @@
 <hr>
 <div>
   <h3>質問/返答</h3>
-  <%= form_with(model: @coment, local: true) do |form| %>
+  <%= form_with(model: [@post, @comment], local: true) do |form| %>
     <%= form.text_area :com_ans, placeholder: "text", rows: "10"%>
     <br>
     <%= form.text_field :com_name, placeholder: "name" %>
     <br>
     <%= form.submit "SEND" %>
   <% end %>
-<div>
+</div>
 <hr>
+<div class="comments">
+  <h3>＜返答一覧＞</h3>
+  <% @comments.each do |comment| %>
+    <div>回答：<%= comment.com_ans%></div>
+    <div>投稿者名：<%= comment.com_name%></div>
+    <br>
+  <% end %>
+</div>
